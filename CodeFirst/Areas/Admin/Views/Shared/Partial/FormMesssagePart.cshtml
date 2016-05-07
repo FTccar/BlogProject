@@ -1,0 +1,9 @@
+﻿@using CodeFirst.Areas.Admin.Models.Types;
+@if (ViewBag.IslemDurum == 1)
+{
+    <div class="alert alert-success" role="alert" style="">@FormMessages.addsuccess</div>
+}
+else if (ViewBag.IslemDurum == 2)
+{
+    <div class="alert alert-danger" role="alert">@FormMessages.required</div>
+}
