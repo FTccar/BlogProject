@@ -1,4 +1,5 @@
-﻿using CodeFirst.Models.ORM.Context;
+﻿using CodeFirst.Areas.Admin.Models.Attribute;
+using CodeFirst.Models.ORM.Context;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,6 +8,7 @@ using System.Web.Mvc;
 
 namespace CodeFirst.Areas.Admin.Controllers
 {
+    [LoginControl]
     public class BaseController : Controller
     {
         public BlogContext db;

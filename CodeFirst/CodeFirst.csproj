@@ -150,6 +150,8 @@
     <Content Include="Areas\Admin\Content\css\morris.css" />
     <Content Include="Areas\Admin\Content\css\sb-admin-2.css" />
     <Content Include="Areas\Admin\Content\css\timeline.css" />
+    <Content Include="Areas\Admin\Content\css\dataTables.bootstrap.css" />
+    <Content Include="Areas\Admin\Content\img\Remove.png" />
     <Content Include="Script\bootstrap.min.js" />
     <Content Include="Script\jquery.min.js" />
     <Content Include="Script\metisMenu.js" />
@@ -192,6 +194,18 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\Admin\Views\Shared\Partial\FormMesssagePart.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Admin\Content\css\responsive.dataTables.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Admin\Views\Category\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Admin\Views\Category\UpdateCategory.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Admin\Views\Category\Partial\CategoryForm.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

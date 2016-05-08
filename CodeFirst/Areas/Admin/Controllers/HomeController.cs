@@ -13,10 +13,15 @@ namespace CodeFirst.Areas.Admin.Controllers
         //
         // GET: /Admin/Home/
 
-        [LoginControl]
+        
         public ActionResult Index()
         {
             return View();
+        }
+
+        public ActionResult Logoff()
+        {
+            return RedirectToAction("Logoff", "Login");
         }
 
     }
