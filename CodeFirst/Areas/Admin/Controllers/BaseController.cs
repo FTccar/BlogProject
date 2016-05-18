@@ -15,6 +15,7 @@ namespace CodeFirst.Areas.Admin.Controllers
 
         public BaseController()
         {
+            //ViewBag.Username = HttpContext.User.Identity.Name;
             db = new BlogContext();
         }
 

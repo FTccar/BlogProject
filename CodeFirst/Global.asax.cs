@@ -1,9 +1,11 @@
-﻿using System;
+﻿using CodeFirst.App_Start;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Http;
 using System.Web.Mvc;
+using System.Web.Optimization;
 using System.Web.Routing;
 
 namespace CodeFirst
@@ -15,7 +17,7 @@ namespace CodeFirst
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
-
+            BundleConfig.RegisterBundles(BundleTable.Bundles); // App_start'ta ki style ve .js dosyaları için oluşturuluyor.
             WebApiConfig.Register(GlobalConfiguration.Configuration);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
