@@ -3,6 +3,9 @@
     ViewBag.Title = "AddBlogPost";
     Layout = "~/Areas/Admin/Views/Shared/AdminLayout.cshtml";
 }
+<script src="~/Script/ckeditor/ckeditor.js"></script>
 
-@Html.Partial("Partial/BlogPostForm");
-
+@using (Html.BeginForm("AddBlogPost", "BlogPost", FormMethod.Post, new { @enctype = "multipart/form-data" }))
+{
+    @Html.Partial("Partial/BlogPostForm");
+}

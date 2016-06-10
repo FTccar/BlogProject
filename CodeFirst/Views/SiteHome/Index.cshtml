@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/SiteLayout.cshtml";
+}
+@model List<CodeFirst.Areas.Admin.Models.DTO.BlogPostDTO>
+@foreach (var item in Model)
+{
+    <div class="row">
+        <div class="col-md-7">
+            <a href="#">
+                @*<img class="img-responsive" src="http://placehold.it/700x300" alt="">*@
+                <img class="img-responsive" src="~/Areas/Admin/Content/Site/images/BlogPost/@item.PostImage" />
+            </a>
+        </div>
+        <div class="col-md-5">
+            <h3>@item.Title</h3>
+            <h4>@item.CategoryName</h4>
+            <p>@Html.Raw(item.Content)</p>
+            <a class="btn btn-primary" href="#"> <span class="glyphicon glyphicon-chevron-right"></span></a>
+        </div>
+    </div>
+    <hr>
+}

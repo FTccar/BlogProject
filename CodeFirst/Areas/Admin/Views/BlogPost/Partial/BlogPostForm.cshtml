@@ -1,25 +1,24 @@
-﻿
-@model CodeFirst.Areas.Admin.Models.DTO.BlogPostDTO
-<script src="~/Script/ckeditor/ckeditor.js"></script>
+﻿@model CodeFirst.Areas.Admin.Models.DTO.BlogPostDTO
 
-@using (Html.BeginForm())
-{
-    <form>
-        <div class="form-group">
-            @Html.TextBoxFor(x => x.Title, new { @class = "form-control", @placeholder = "Başlık", @name = "Title" })
-            @Html.ValidationMessageFor(x => x.Title)
-        </div>
-        <div class="form-group">
-            @Html.DropDownList("CategoryID", Model.drpCategories, "Seçiniz", new { @class = "form-control", @name = "CateogryID" })
-            @Html.ValidationMessageFor(x => x.Title)
-        </div>
-        <div class="form-group">
-            <label>İçerik</label>
-            @Html.TextAreaFor(x => x.Content, new { @class="ckeditor"})
-            @*<textarea class="ckeditor" name="Content" id="ckeditor"></textarea>*@ @*Name content dendi çünkü dto tiplerdeki blogpostdto'da ki contente karşılık gelsin diye*@
-        </div>
 
-        <button type="submit" class="btn btn-default">Kaydet</button>
-        <button type="reset" class="btn btn-default">Reset Button</button>
-    </form>
-}
+<div class="form-group">
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control", @placeholder = "Başlık", @name = "Title" })
+    @Html.ValidationMessageFor(x => x.Title)
+</div>
+<div class="form-group">
+    @Html.DropDownList("CategoryID", Model.drpCategories, "Seçiniz", new { @class = "form-control", @name = "CateogryID" })
+    @Html.ValidationMessageFor(x => x.Title)
+</div>
+<div class="form-group">
+    @Html.LabelFor(x => x.PostImage)
+    <input type="file" name="PostImage" />
+</div>
+<div class="form-group">
+    <label>İçerik</label>
+    @Html.TextAreaFor(x => x.Content, new { @class = "ckeditor" })
+    @*<textarea class="ckeditor" name="Content" id="ckeditor"></textarea>*@ @*Name content dendi çünkü dto tiplerdeki blogpostdto'da ki contente karşılık gelsin diye*@
+</div>
+
+<button type="submit" class="btn btn-default">Kaydet</button>
+<button type="reset" class="btn btn-default">Reset Button</button>
+

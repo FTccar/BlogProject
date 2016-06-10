@@ -1,8 +1,15 @@
-﻿
+﻿@model CodeFirst.Areas.Admin.Models.DTO.BlogPostDTO
 @{
     ViewBag.Title = "UpdateBlogPost";
     Layout = "~/Areas/Admin/Views/Shared/AdminLayout.cshtml";
 }
 
 <h2>Blog Yazısı Güncelleme</h2>
-@Html.Partial("Partial/BlogPostForm");
+
+<script src="~/Script/ckeditor/ckeditor.js"></script>
+
+
+@using (Html.BeginForm("UpdateBlogPost", "BlogPost", FormMethod.Post, new { @enctype = "multipart/form-data" }))
+{
+    Html.Partial("Partial/BlogPostForm");
+}

@@ -26,5 +26,6 @@ namespace CodeFirst.Models.ORM.Context
         public DbSet<Category> Categories { get; set; }
         public DbSet<BlogPost> BlogPosts { get; set; }
         public DbSet<SiteMenu> SiteMenus{ get; set; }
+        public DbSet<BlogPostComment> BlogPostComments { get; set; }
     }
 }

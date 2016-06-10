@@ -163,14 +163,18 @@
     <Compile Include="Areas\Admin\Models\DTO\SiteMenuDTO.cs" />
     <Compile Include="Areas\Admin\Models\Services\HTMLDataSoruce\drpServices.cs" />
     <Compile Include="Areas\Admin\Models\Types\FormMessages.cs" />
+    <Compile Include="Controllers\SiteBaseController.cs" />
+    <Compile Include="Controllers\SiteHomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\DTO\CommentDTO.cs" />
     <Compile Include="Models\ORM\Context\BlogContext.cs" />
     <Compile Include="Models\ORM\Entity\AdminUser.cs" />
     <Compile Include="Models\ORM\Entity\BaseEntity.cs" />
     <Compile Include="Models\ORM\Entity\BlogPost.cs" />
+    <Compile Include="Models\ORM\Entity\BlogPostComment.cs" />
     <Compile Include="Models\ORM\Entity\Category.cs" />
     <Compile Include="Models\ORM\Entity\SiteMenu.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -187,7 +191,40 @@
     <Content Include="Areas\Admin\Content\css\timeline.css" />
     <Content Include="Areas\Admin\Content\css\dataTables.bootstrap.css" />
     <Content Include="Areas\Admin\Content\img\Remove.png" />
+    <Content Include="Areas\Admin\Content\Site\images\BlogPost\289d4dec-7d4e-42a9-b494-94b9236ef924images.jpg" />
+    <Content Include="Areas\Admin\Content\Site\images\BlogPost\60102b10-4467-4de2-a9f5-09af79dceb1bimages.jpg" />
+    <Content Include="Areas\Admin\Content\Site\images\BlogPost\8cb39bbf-b016-4ab2-abff-86f592b2b17fimages.jpg" />
+    <Content Include="Areas\Admin\Content\Site\images\BlogPost\images.jpg" />
     <Content Include="Areas\Admin\Views\SiteMenu\SiteMenuJSON.html" />
+    <Content Include="Content\css\bootstrap.min.css" />
+    <Content Include="Content\css\style.css" />
+    <Content Include="Content\css\1-col-portfolio.css" />
+    <Content Include="Content\images\Template\bedroom.jpg" />
+    <Content Include="Content\images\Template\bg-body.png" />
+    <Content Include="Content\images\Template\bg-box.png" />
+    <Content Include="Content\images\Template\bg-contents.png" />
+    <Content Include="Content\images\Template\bg-pattern.jpg" />
+    <Content Include="Content\images\Template\bg-sidebar.png" />
+    <Content Include="Content\images\Template\bg-time.png" />
+    <Content Include="Content\images\Template\buttons.png" />
+    <Content Include="Content\images\Template\carving-master.jpg" />
+    <Content Include="Content\images\Template\carving-small.png" />
+    <Content Include="Content\images\Template\chair-small.png" />
+    <Content Include="Content\images\Template\chair.jpg" />
+    <Content Include="Content\images\Template\frames.png" />
+    <Content Include="Content\images\Template\icons.png" />
+    <Content Include="Content\images\Template\kitchen.jpg" />
+    <Content Include="Content\images\Template\living-room.jpg" />
+    <Content Include="Content\images\Template\logo.png" />
+    <Content Include="Content\images\Template\resort-small.png" />
+    <Content Include="Content\images\Template\resort.png" />
+    <Content Include="Content\images\Template\separator-dark-vertical.png" />
+    <Content Include="Content\images\Template\separator-dark.png" />
+    <Content Include="Content\images\Template\separator-light-vertical.png" />
+    <Content Include="Content\images\Template\separator-light.png" />
+    <Content Include="Content\images\Template\show-room.png" />
+    <Content Include="Content\images\Template\sofa.jpg" />
+    <Content Include="Content\images\Template\wood-floor.jpg" />
     <Content Include="Script\bootstrap.min.js" />
     <Content Include="Script\ckeditor\adapters\jquery.js" />
     <Content Include="Script\ckeditor\CHANGES.html" />
@@ -567,7 +604,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Views\Base\" />
-    <Folder Include="Controllers\" />
+    <Folder Include="Views\SiteBase\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -619,6 +656,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\Admin\Views\BlogPost\UpdateBlogPost.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\SiteLayout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\SiteHome\Index.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
